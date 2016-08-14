@@ -28,5 +28,8 @@
   },
   "devDependencies": {
     "sails": "~0.11.0"
+  },
+  "dependencies": {
+    "fs": "0.0.2"
   }
 }
