@@ -1,0 +1,32 @@
+{
+  "name": "sails-hook-jbrowse",
+  "version": "1.0.0",
+  "description": "Provides backend support for JBrowse to write comment track changes to trackData.json file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pupudu/sails-hook-jbrowse.git"
+  },
+  "keywords": [
+    "sails",
+    "jbrowse",
+    "comments",
+    "disqus"
+  ],
+  "author": "Pubudu Dodangoda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pupudu/sails-hook-jbrowse/issues"
+  },
+  "homepage": "https://github.com/pupudu/sails-hook-jbrowse#readme",
+  "sails": {
+    "isHook": true,
+    "hookName": "comment-server"
+  },
+  "devDependencies": {
+    "sails": "~0.11.0"
+  }
+}
