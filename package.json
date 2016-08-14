@@ -1,6 +1,6 @@
 {
   "name": "sails-hook-jbrowse",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Provides backend support for JBrowse to write comment track changes to trackData.json file",
   "main": "index.js",
   "scripts": {

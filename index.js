@@ -1,15 +1,16 @@
+var fs = require('fs');
 module.exports = function commentServer(sails) {
-    /**
-     * @return {number}
-     */
-    this.Comparator = function (a, b) {
-        if (a[1] < b[1]) return -1;
-        if (a[1] > b[1]) return 1;
-        return 0;
-    };
     return {
         initialize: function(cb){
-            var fs = require('fs');
+            /**
+             * @return {number}
+             */
+            this.Comparator = function (a, b) {
+                if (a[1] < b[1]) return -1;
+                if (a[1] > b[1]) return 1;
+                return 0;
+            };
+            return cb();
         },
         routes: {
             before: {
@@ -56,7 +57,6 @@ module.exports = function commentServer(sails) {
                     var obj = {};
                     var ids = [];
                     for (var i = 0; i < listLength; i++) {
-
                         var attrs = dataObj.intervals.classes[list[i][0]].attributes;
                         var thread = {};
                         var thread_id = list[i][attrs.indexOf('thread_id')+1];
@@ -75,6 +75,7 @@ module.exports = function commentServer(sails) {
                     }
 
                     index = ids.indexOf(newId);
+
                     /**
                      * Process start new thread action
                      */
