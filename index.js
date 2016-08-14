@@ -1,4 +1,12 @@
 module.exports = function commentServer(sails) {
+    /**
+     * @return {number}
+     */
+    this.Comparator = function (a, b) {
+        if (a[1] < b[1]) return -1;
+        if (a[1] > b[1]) return 1;
+        return 0;
+    };
     return {
         initialize: function(cb){
             var fs = require('fs');
@@ -102,4 +110,4 @@ module.exports = function commentServer(sails) {
             }
         }
     };
-}
+};
